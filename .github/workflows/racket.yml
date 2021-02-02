@@ -1,0 +1,15 @@
+name: Racket
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Bogdanp/setup-racket@v0.11
+        with:
+          architecture: 'x64'
+          distribution: 'full'
+          version: '8.0'
+      - name: Run Tests
+        run: raco test src/*.test.rkt

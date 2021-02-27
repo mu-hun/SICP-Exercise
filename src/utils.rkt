@@ -21,4 +21,10 @@
 	  (cons min (range (+ min step) max step))
 	  '()))))
 
-(range)
+(define (cube x) (* x x x))
+
+(define (inc n) (+ n 1))
+
+(define (identity x) x)
+
+(provide range cube inc identity)

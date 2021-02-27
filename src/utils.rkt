@@ -27,4 +27,6 @@
 
 (define (identity x) x)
 
-(provide range cube inc identity)
+(define (square x) (expt x 2))
+
+(provide range cube inc identity square)

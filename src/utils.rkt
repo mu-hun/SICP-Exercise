@@ -29,4 +29,7 @@
 
 (define (square x) (expt x 2))
 
-(provide range cube inc identity square)
+(define (average a b)
+  (/ (+ a b) 2))
+
+(provide range cube inc identity square average)

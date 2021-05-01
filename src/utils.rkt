@@ -29,4 +29,10 @@
 
 (define (square x) (expt x 2))
 
-(provide range cube inc identity square)
+(define (accumulate op initial sequence)
+  (if (null? sequence)
+    initial
+    (op (car sequence)
+        (accumulate op initial (cdr sequence)))))
+
+(provide range cube inc identity square accumulate)

@@ -9,7 +9,8 @@
   (let ((x '((7))))
     (check-equal? (car (car x)) 7)
   )
-  ; cdr 로 불러오는 데이터는 다시 닫혀 있어 car 을 쌍으로 불러줘야 한다. 세번째 문제만이 아닌 첫번째 문제도 마찬가지다.
+  ; The data getting with cdr is list type. so it closed two times.
+  ; Therefore we need to call the 'car' procedure in pair with 'cdr'. (The first problem is solved that way.)
   (let ((x '(1 (2 (3 (4 (5 (6 7))))))))
     (check-equal?
     (car (cdr
